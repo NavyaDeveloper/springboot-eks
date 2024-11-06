@@ -4,7 +4,7 @@ pipeline {
     environment {
         AWS_REGION = 'us-east-1'  // Set your AWS region
         ECR_REPO = '535002851105.dkr.ecr.us-east-1.amazonaws.com/spring-boot'  // Set your ECR repository URL
-        IMAGE_TAG = 'latest'
+        IMAGE_TAG = "${BUILD_NUMBER}"  // Use Jenkins build number as the tag
     }
 
     stages {
